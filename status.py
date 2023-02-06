@@ -43,6 +43,7 @@ async def price(ctx):
     price = data[crypto][currency]
     await ctx.send(f"Price: ${price}")
 
+# actively updates the status every interval * x seconds. 
 async def update_status():
     await client.wait_until_ready()
     while not client.is_closed():
